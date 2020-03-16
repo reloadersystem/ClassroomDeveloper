@@ -4,6 +4,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
@@ -22,10 +23,12 @@ import retrofit2.http.Query;
 public interface MethodWs {
 
     @GET("courses?")
-    @Headers("Content-Type:application/json")
-    Call<ResponseBody> getCursosMail(@Query("courseStates") String courseStates,
+   // @Headers({"Content-Type:application/json"})
+    Call<ResponseBody> getCursosMail(
+            @Query("courseStates") String courseStates,
             @Query("studentId") String studentId,
-            @Query("teacherId") String teacherId
+            @Query("teacherId") String teacherId,
+            @Query("access_token") String access_token
                                      );
 
     @GET("wsObtenerSubCategoria.php?")

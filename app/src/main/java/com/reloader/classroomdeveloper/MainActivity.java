@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         MethodWs methodWs = HelperWs.getConfiguration(this).create(MethodWs.class);
-        Call<ResponseBody> responseBodyCall = methodWs.getCursosMail(coursesStates, studentId, teacherId);
+        Call<ResponseBody> responseBodyCall = methodWs.getCursosMail(coursesStates, studentId, teacherId, Token);
         responseBodyCall.enqueue(new Callback<ResponseBody>() {
 
             @Override
@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
                 // mlistCategorias = new ArrayList<>();
 
-               // https://classroom.googleapis.com/v1/courses?courseStates=ACTIVE&studentId=jgrandez.ti@sacooliveros.edu.pe&teacherId=106561750177077134995
+                // https://classroom.googleapis.com/v1/courses?courseStates=ACTIVE&studentId=jgrandez.ti@sacooliveros.edu.pe&teacherId=106561750177077134995
+                //https://classroom.googleapis.com/v1/courses?courseStates=ACTIVE&studentId=rcorrea.ti%40sacooliveros.edu.pe&teacherId=106561750177077134995&access_token=ya29.a0Adw1xeVKBdi1vy1uw6-HTBM1bP4XBMfxxNeGJlZ2FoWCBlC4kjpdaGNMnmJdmWZS72YMub1-6x5DeByLlGVznnNWbL4PPGa5MA9FzN56TRYIXi_jtUONEa9nXBEzK1PdIceFqotlCUlHEXRdW059mxixjP0paRna5FU&key=[YOUR_API_KEY]' \
+
 
                 if (response.isSuccessful()) {
                     try {
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
-                 Log.e("infoResponseFalse", t.getMessage());
+                Log.e("infoResponseFalse", t.getMessage());
             }
         });
     }
