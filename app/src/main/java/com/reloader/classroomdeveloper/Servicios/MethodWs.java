@@ -2,34 +2,24 @@ package com.reloader.classroomdeveloper.Servicios;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.Headers;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**
- * Created by Reloader on 10/7/19.
+ * Created by Reloader on 16/03/2020.
  */
-
-
-//https://classroom.googleapis.com/v1/courses
-//https://classroom.googleapis.com/v1/courses/53511911464/teachers/
-//https://classroom.googleapis.com/v1/courses/53511911464
-//https://classroom.googleapis.com/v1/courses?courseStates=ACTIVE&studentId=jgrandez.ti@sacooliveros.edu.pe&teacherId=106561750177077134995
 
 
 public interface MethodWs {
 
     @GET("courses?")
-   // @Headers({"Content-Type:application/json"})
     Call<ResponseBody> getCursosMail(
             @Query("courseStates") String courseStates,
             @Query("studentId") String studentId,
             @Query("teacherId") String teacherId,
             @Query("access_token") String access_token
-                                     );
+    );
 
     @GET("wsObtenerSubCategoria.php?")
     @Headers("Content-Type:application/json")
