@@ -14,12 +14,14 @@ import retrofit2.http.Query;
 public interface MethodWs {
 
     @GET("courses?")
+    @Headers({"Content-Type:application/json",
+            "refresh_token:1//04p0C4eW6aSUbCgYIARAAGAQSNwF-L9Ir-fKGX4xAqOb6iNXv7PhuK8PI10jdijdTSEuy0Rg3rr7bKWv3Gi0t1RI2sI3TEG5XATg"}
+    )
     Call<ResponseBody> getCursosMail(
             @Query("courseStates") String courseStates,
             @Query("studentId") String studentId,
             @Query("teacherId") String teacherId,
-            @Query("access_token") String access_token
-    );
+            @Query("access_token") String access_token);
 
     @GET("wsObtenerSubCategoria.php?")
     @Headers("Content-Type:application/json")

@@ -1,6 +1,7 @@
 package com.reloader.classroomdeveloper.Entidades;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ public class MCursos {
    private String name;
    private String section;
    private String descriptionHeading;
-   private String room;
+ //  private String room;
    private String ownerId;
    private String creationTime;
    private String updateTime;
@@ -19,16 +20,15 @@ public class MCursos {
    private String alternateLink;
    private String teacherGroupEmail;
    private String courseGroupEmail;
-   private ArrayList<MTeacherFolder> mTeacherFolders;
+   //private JSONObject mTeacherFolders;
    private String guardiansEnabled;
    private String calendarId;
 
-    public MCursos(String id, String name, String section, String descriptionHeading, String room, String ownerId, String creationTime, String updateTime, String enrollmentCode, String courseState, String alternateLink, String teacherGroupEmail, String courseGroupEmail, ArrayList<MTeacherFolder> mTeacherFolders, String guardiansEnabled, String calendarId) {
+    public MCursos(String id, String name, String section, String descriptionHeading, String ownerId, String creationTime, String updateTime, String enrollmentCode, String courseState, String alternateLink, String teacherGroupEmail, String courseGroupEmail, String guardiansEnabled, String calendarId) {
         this.id = id;
         this.name = name;
         this.section = section;
         this.descriptionHeading = descriptionHeading;
-        this.room = room;
         this.ownerId = ownerId;
         this.creationTime = creationTime;
         this.updateTime = updateTime;
@@ -37,7 +37,6 @@ public class MCursos {
         this.alternateLink = alternateLink;
         this.teacherGroupEmail = teacherGroupEmail;
         this.courseGroupEmail = courseGroupEmail;
-        this.mTeacherFolders = mTeacherFolders;
         this.guardiansEnabled = guardiansEnabled;
         this.calendarId = calendarId;
     }
@@ -72,14 +71,6 @@ public class MCursos {
 
     public void setDescriptionHeading(String descriptionHeading) {
         this.descriptionHeading = descriptionHeading;
-    }
-
-    public String getRoom() {
-        return room;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
     }
 
     public String getOwnerId() {
@@ -144,14 +135,6 @@ public class MCursos {
 
     public void setCourseGroupEmail(String courseGroupEmail) {
         this.courseGroupEmail = courseGroupEmail;
-    }
-
-    public ArrayList<MTeacherFolder> getmTeacherFolders() {
-        return mTeacherFolders;
-    }
-
-    public void setmTeacherFolders(ArrayList<MTeacherFolder> mTeacherFolders) {
-        this.mTeacherFolders = mTeacherFolders;
     }
 
     public String getGuardiansEnabled() {

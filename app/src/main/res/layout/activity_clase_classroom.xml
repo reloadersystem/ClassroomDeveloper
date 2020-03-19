@@ -3,22 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/lyt_servicios"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:elevation="2dp"
-    android:padding="10dp"
+    android:padding="5dp"
     app:cardCornerRadius="4dp"
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="10dp">
 
         <LinearLayout
             android:id="@+id/ln_head"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-           android:background="@drawable/sh_buttom"
+            android:background="@drawable/sh_buttom"
             android:orientation="vertical">
 
             <LinearLayout
@@ -31,22 +31,17 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/txt_titulo"
+                    android:id="@+id/txt_clasetitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Titulo"
                     android:textColor="@android:color/white"></TextView>
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_more"></ImageView>
-
             </LinearLayout>
 
             <TextView
-                android:id="@+id/txt_descripcion"
+                android:id="@+id/txt_clasedescripcion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/spacing_large"
@@ -57,73 +52,28 @@
                 android:textSize="10sp"></TextView>
 
             <TextView
-                android:id="@+id/txt_tema"
+                android:id="@+id/txt_clasecodigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/spacing_large"
                 android:layout_marginRight="@dimen/spacing_large"
                 android:layout_marginBottom="@dimen/spacing_large"
-                android:text="Tema"
+                android:text="Codigo de la clase "
                 android:textColor="@android:color/white"
                 android:textSize="10sp"></TextView>
 
-
         </LinearLayout>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/img_favoritos"
-            android:layout_width="85dp"
-            android:layout_height="65dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="5dp"
-            android:src="@drawable/img_perfil" />
 
         <LinearLayout
             android:id="@+id/ln_body"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="match_parent"
             android:layout_below="@+id/ln_head"
-            android:orientation="vertical"></LinearLayout>
-
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_below="@+id/ln_body"
-            android:layout_marginBottom="5dp"
-            android:background="@android:color/darker_gray" />
-
-        <LinearLayout
-            android:id="@+id/ln_person"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/divider"
-            android:orientation="horizontal"
-            android:weightSum="100"
-            >
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="80"></TextView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="10"
-                android:src="@drawable/ic_person"></ImageView>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_weight="10"
-                android:src="@drawable/ic_folder"></ImageView>
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
 
         </LinearLayout>
+
 
     </RelativeLayout>
 
