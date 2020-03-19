@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.reloader.classroomdeveloper.Api.ClassroomQuickstart;
 import com.reloader.classroomdeveloper.Entidades.MCursos;
 import com.reloader.classroomdeveloper.R;
 import com.reloader.classroomdeveloper.Servicios.Constantes;
@@ -49,10 +50,11 @@ public class MainActivity extends AppCompatActivity {
 
         mCursosList = new ArrayList<>();
 
+
+
         //https://classroom.googleapis.com/v1/courses?courseStates=ACTIVE&studentId=jgrandez.ti@sacooliveros.edu.pe&teacherId=106561750177077134995
 
-
-        btn_buscar.setOnClickListener(new View.OnClickListener() {
+       /* btn_buscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 KeyApi = Constantes.API_KEY;
@@ -160,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
             }
-        });
+        });*/
     }
 
 }
